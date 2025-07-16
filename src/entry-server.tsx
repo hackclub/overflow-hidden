@@ -22,7 +22,7 @@ export default createHandler(() => (
             href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
           />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/logo.svg" />
           {assets}
         </head>
         <body>
