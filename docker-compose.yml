@@ -4,7 +4,7 @@ services:
   app:
     build: .
     ports:
-      - "3000:80"
+      - "9994:80"
     restart: unless-stopped
     
   # Optional: Development service that watches for changes
@@ -17,6 +17,6 @@ services:
       - .:/app
       - /app/node_modules
     ports:
-      - "3000:3000"
+      - "9994:3000"
     command: pnpm run dev
     restart: unless-stopped 
