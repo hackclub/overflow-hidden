@@ -6,7 +6,7 @@
 		"build": "vinxi build --preset static",
 		"start": "vinxi start",
 		"version": "vinxi version",
-		"deploy": "gh-pages -d .output"
+		"deploy": "type nul > ./.output/public/.nojekyll && gh-pages -d .output/public -t"
 	},
 	"dependencies": {
 		"@solidjs/meta": "^0.29.4",
