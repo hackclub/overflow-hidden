@@ -184,10 +184,12 @@ button {
 			&.bottom {
 				right: 50%;
 				bottom: 2vh;
+
+				transform: translateX(50%);
+
 				@media (orientation: portrait) {
 					bottom: 10vh;
 				}
-				transform: translateX(50%);
 
 				svg {
 					rotate: 90deg;

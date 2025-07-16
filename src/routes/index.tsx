@@ -12,6 +12,35 @@ export default function Home() {
     const interval = setInterval(() => {
       setTyping(text.slice(0, typing().length + 1));
     }, 100);
+
+    document.onkeydown = (e) => {
+      if (e.key === 'ArrowRight') {
+        if (page() === 0) {
+          setPage(1);
+        } else if (page() === 3) {
+          setPage(0);
+        }
+      } else if (e.key === 'ArrowUp') {
+        if (page() === 0) {
+          setPage(2);
+        } else if (page() === 4) {
+          setPage(0);
+        }
+      } else if (e.key === 'ArrowLeft') {
+        if (page() === 0) {
+          setPage(3);
+        } else if (page() === 1) {
+          setPage(0);
+        }
+      } else if (e.key === 'ArrowDown') {
+        if (page() === 0) {
+          setPage(4);
+        } else if (page() === 2) {
+          setPage(0);
+        }
+      }
+    };
+
     return () => clearInterval(interval);
   });
 
