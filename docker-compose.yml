@@ -3,20 +3,20 @@ version: '3.8'
 services:
   app:
     build: .
-    ports:
-      - "9994:80"
+    expose:
+      - '80'
     restart: unless-stopped
-    
+
   # Optional: Development service that watches for changes
   dev:
-    profiles: ["dev"]
+    profiles: ['dev']
     build:
       context: .
       target: builder
     volumes:
       - .:/app
       - /app/node_modules
-    ports:
-      - "9994:3000"
+    expose:
+      - '3000'
     command: pnpm run dev
-    restart: unless-stopped 
+    restart: unless-stopped
