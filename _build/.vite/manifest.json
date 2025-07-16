@@ -1,0 +1,31 @@
+{
+  "_web-DP5W_D-9.js": {
+    "file": "assets/web-DP5W_D-9.js",
+    "name": "web"
+  },
+  "src/routes/index.tsx?pick=default&pick=$css": {
+    "file": "assets/index-CBa9kFV3.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-DP5W_D-9.js"
+    ],
+    "css": [
+      "assets/index-CxiTDq7D.css"
+    ]
+  },
+  "virtual:$vinxi/handler/client": {
+    "file": "assets/client-WehJWhkn.js",
+    "name": "client",
+    "src": "virtual:$vinxi/handler/client",
+    "isEntry": true,
+    "imports": [
+      "_web-DP5W_D-9.js"
+    ],
+    "dynamicImports": [
+      "src/routes/index.tsx?pick=default&pick=$css"
+    ]
+  }
+}
