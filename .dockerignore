@@ -1,0 +1,41 @@
+# Build outputs
+.output
+.vinxi
+dist
+.wrangler
+.vercel
+.netlify
+
+# Dependencies
+node_modules
+
+# Development files
+.git
+.gitignore
+README.md
+
+# Environment files
+.env
+.env*.local
+
+# IDEs and editors
+.idea
+.project
+.classpath
+*.launch
+.settings/
+.vscode
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Docker files (avoid copying into themselves)
+Dockerfile
+.dockerignore
+docker-compose.yml 
