@@ -3,9 +3,10 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vinxi dev --host",
-		"build": "vinxi build",
+		"build": "vinxi build --preset static",
 		"start": "vinxi start",
-		"version": "vinxi version"
+		"version": "vinxi version",
+		"deploy": "gh-pages -d .output"
 	},
 	"dependencies": {
 		"@solidjs/meta": "^0.29.4",
@@ -18,6 +19,11 @@
 		"node": ">=22"
 	},
 	"devDependencies": {
+		"gh-pages": "^6.3.0",
 		"sass": "^1.89.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hackclub/overflow-hidden.git"
 	}
 }
