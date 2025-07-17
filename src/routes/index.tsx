@@ -13,7 +13,7 @@ const GALLERY = [
 ];
 
 export default function Home() {
-  const [page, setPage] = createSignal(2);
+  const [page, setPage] = createSignal(0);
   const [typing, setTyping] = createSignal('');
 
   onMount(() => {
