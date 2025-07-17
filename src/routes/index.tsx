@@ -1,10 +1,19 @@
 import { Title } from '@solidjs/meta';
 import Counter from '~/components/Counter';
 import styles from './index.module.scss';
-import { createSignal, onMount, Show } from 'solid-js';
+import { createSignal, For, onMount, Show } from 'solid-js';
+
+const GALLERY = [
+  {
+    img: '/gallery/zara.png',
+    url: 'https://zarazahed.github.io/overflow/',
+    slack: '@zara',
+    slackUrl: 'https://hackclub.slack.com/team/U08T43WFW80',
+  },
+];
 
 export default function Home() {
-  const [page, setPage] = createSignal(0);
+  const [page, setPage] = createSignal(2);
   const [typing, setTyping] = createSignal('');
 
   onMount(() => {
@@ -265,7 +274,31 @@ export default function Home() {
         <div class={`${styles.page} ${styles.top}`}>
           <div class={`${styles.content}`}>
             <h1>Gallery</h1>
-            <p>coming soon...</p>
+            <div class={styles.gallery}>
+              <For each={GALLERY}>
+                {(item) => (
+                  <div>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={item.img} alt={`${item.slack}'s project`} />
+                    </a>
+                    <p class={styles.slack}>
+                      Made by{' '}
+                      <a
+                        href={item.slackUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.slack}
+                      </a>
+                    </p>
+                  </div>
+                )}
+              </For>
+            </div>
           </div>
         </div>
 
