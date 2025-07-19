@@ -8,7 +8,7 @@ export default function App() {
     <Router
       root={(props) => (
         <MetaProvider>
-          <Title>Overflow: None</Title>
+          <Title>overflow: hidden;</Title>
           <Suspense>{props.children}</Suspense>
         </MetaProvider>
       )}
